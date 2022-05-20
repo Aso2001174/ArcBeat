@@ -35,30 +35,28 @@ member_mail
 
 
 
-entity "四択問題テーブル" as four_choice <four_choice> <<T,TRANSACTION_MARK_COLOR>> {
-+ for-choice_id [PK]
+entity "4択テーブル" as four_choice <four_choice> <<T,TRANSACTION_MARK_COLOR>> {
++ four-choice_id [PK]
 --
-for-choice_sentence
+four-choice_id
 choice1
 choice2
 choice3
 choice4
-four-choice_explanation
-member_id [FK]
+question_id [FK]
 }
 
 
 
-entity "マルバツ問題テーブル" as two_choice <two_choice> <<T,TRANSACTION_MARK_COLOR>> {
+entity "マルバツテーブル" as two_choice <two_choice> <<T,TRANSACTION_MARK_COLOR>> {
 + two-choice_id [PK]
 --
 two-choice_id
-two-choice_sentence
 true-answer
-false-answer
-two-choice_explanation
-member_id [FK]
+question_id [FK]
 }
+
+
 
 member }|-ri-|{four_choice
 member }|-le-|{two_choice
