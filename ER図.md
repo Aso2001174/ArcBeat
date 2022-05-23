@@ -78,6 +78,7 @@ two-choice_explanation
 member_id [FK]
 }
 
+member ||-d-o{ answer
 answer ||-d-o{ type
 type }|-ri-|{four_choice
 type }|-le-|{two_choice
