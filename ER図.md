@@ -80,7 +80,7 @@ true_answer
 
 member }o-d-||answer
 answer ||-d-o{type
-type |o-ri-||four_choice
-type |o-le-||two_choice
+type |o-ri-|four_choice
+type |o-le-|two_choice
 
 ```
