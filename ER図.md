@@ -81,6 +81,6 @@ member_id [FK]
 member ||-d-o{answer
 answer ||-d-||type
 type }|-ri-o|four_choice
-type }|-le-|{two_choice
+type }|-le-o|two_choice
 
 ```
