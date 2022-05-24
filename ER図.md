@@ -79,7 +79,7 @@ member_id [FK]
 }
 
 member }o-d-||answer
-answer ||-d-o}type
+answer ||-d-o{type
 type }|-ri-o|four_choice
 type }|-le-o|two_choice
 
