@@ -52,7 +52,6 @@ entity "マルバツテーブル" as two_choice <two_choice> <<T,TRANSACTION_MAR
 + two-choice_id [PK]
 --
 two-choice_id
-true-answer
 question_id [FK]
 }
 
@@ -76,6 +75,7 @@ type
 two-choice_sentence
 two-choice_explanation
 member_id [FK]
+true_answer
 }
 
 member }o-d-||answer
