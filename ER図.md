@@ -80,7 +80,7 @@ member_id [FK]
 
 member ||-d-||answer
 answer ||-d-||type
-type |o-ri-|ofour_choice
+type }|-ri-|{four_choice
 type }|-le-|{two_choice
 
 ```
