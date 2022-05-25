@@ -78,10 +78,10 @@ member_id [FK]
 true_answer
 }
 
-answer ||-d-o{member
+answer ||-ri-o{member
 answer ||-d-o{type
 type |o-ri-||four_choice
 type |o-le-||two_choice
-type ||-le-o|member
+type ||-up-o|member
 
 ```
