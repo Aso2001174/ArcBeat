@@ -82,5 +82,6 @@ answer ||-d-o{member
 answer ||-d-o{type
 type |o-ri-||four_choice
 type |o-le-||two_choice
+type ||-le-o|member
 
 ```
