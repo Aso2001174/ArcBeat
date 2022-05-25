@@ -72,8 +72,8 @@ entity "タイプテーブル" as type <type> <<T,TRANSACTION_MARK_COLOR>> {
 --
 question_id
 type
-two-choice_sentence
-two-choice_explanation
+question
+explanation
 member_id [FK]
 true_answer
 }
