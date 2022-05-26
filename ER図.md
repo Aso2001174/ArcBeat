@@ -76,6 +76,7 @@ question
 explanation
 member_id [FK]
 true_answer
+title
 }
 
 answer ||-ri-o{member
