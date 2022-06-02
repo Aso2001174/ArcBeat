@@ -60,7 +60,7 @@ entity "解答テーブル" as answer <answer> <<T,TRANSACTION_MARK_COLOR>> {
 + two-choice_id [PK]
 + member_id [PK]
 --
-two-choice_id [FK]
+question_id [FK]
 member_id [FK]
 answer
 time
