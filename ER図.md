@@ -57,7 +57,7 @@ question_id [FK]
 
 
 entity "解答テーブル" as answer <answer> <<T,TRANSACTION_MARK_COLOR>> {
-+ two-choice_id [PK]
++ question_id [PK]
 + member_id [PK]
 --
 question_id [FK]
