@@ -60,7 +60,7 @@ correct_answer
 }
 
 
-entity "問題テーブル" as questions <type> <<T,TRANSACTION_MARK_COLOR>> {
+entity "問題テーブル" as questions <questions> <<T,TRANSACTION_MARK_COLOR>> {
 + id [PK]
 --
 id
