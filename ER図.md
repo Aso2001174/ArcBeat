@@ -24,13 +24,14 @@ package "クイズメーカー" as target_system{
 
 
 
-entity "メンバーテーブル" as member <member> <<M,MASTER_MARK_COLOR>> {
-+ member_id [PK]
+entity "ユーザーテーブル" as users <users> <<M,MASTER_MARK_COLOR>> {
++ id [PK]
 --
-member_id
-member_name
-member_pass
-member_mail
+id
+name
+pass
+mail
+deleted_at
 }
 
 
@@ -47,42 +48,33 @@ question_id [FK]
 }
 
 
-
-entity "マルバツテーブル" as two_choice <two_choice> <<T,TRANSACTION_MARK_COLOR>> {
-+ two-choice_id [PK]
+entity "解答テーブル" as answers <answers> <<T,TRANSACTION_MARK_COLOR>> {
++ id [PK]
++ user_id [PK]
 --
-two-choice_id
-question_id [FK]
+id [FK]
+user_id [FK]
+category
+answer_number
+correct_answer
 }
 
 
-entity "解答テーブル" as answer <answer> <<T,TRANSACTION_MARK_COLOR>> {
-+ question_id [PK]
-+ member_id [PK]
+entity "問題テーブル" as questions <type> <<T,TRANSACTION_MARK_COLOR>> {
++ id [PK]
 --
-question_id [FK]
-member_id [FK]
-answer
-time
-}
-
-
-entity "タイプテーブル" as type <type> <<T,TRANSACTION_MARK_COLOR>> {
-+ question_id [PK]
---
-question_id
-type
+id
+category
 question
 explanation
-member_id [FK]
-true_answer
+user_id [FK]
+answer
 title
 }
 
-answer ||-ri-o{member
-answer ||-d-o{type
-type |o-ri-||four_choice
-type |o-le-||two_choice
-type ||-up--{member
+answers ||-ri-o{users
+answers ||-d-o{questions
+questions |o-ri-||four_choice
+questions ||-up--{users
 
 ```
